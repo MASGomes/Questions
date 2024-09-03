@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício Interativo - Preencher Espaços</title>
+</head>
+<body>
+  <h2>Preencha os espaços:</h2>
+  <p>1. My mother ( <input type="text" id="resposta"> ) a doctor.</p>
+ 
+
+  <button onclick="verificarResposta()">Enviar Resposta</button>
+  <p id="feedback"></p>
+
+  <script>
+    function verificarResposta() {
+      var resposta = document.getElementById("resposta").value.trim().toLowerCase();
+      var feedback = document.getElementById("feedback");
+
+      if (resposta === "is") {
+        feedback.innerHTML = "Correto! A frase é: My mother is a doctor.";
+        feedback.style.color = "green";
+      } else {
+        feedback.innerHTML = "Errado! Tente novamente.";
+        feedback.style.color = "red";
+      }
+
+      }
+    
+  </script>
+</body>
+</html>
